@@ -1,15 +1,15 @@
 pipeline {
-    agent {
-        label "ansible_docker"
+  agent any
+  stages {
+    stage('First stage'){
+      steps {
+        echo "I'm runing"  
+      }
     }
-
-    stages {
-        stage('prepare_node') {
-            steps {
-                git 'https://github.com/nicko203/freestylejob.git'
-                sh 'ansible-galaxy install -r requirements.yml -p roles'
-                sh 'ansible-playbook site.yml -i inventory/prod.yml'
-            }
-        }
+    stage('Second stage'){
+      steps {
+        echo "And I'm too"
+      }
     }
+  }
 }
