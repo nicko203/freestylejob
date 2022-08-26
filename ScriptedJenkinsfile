@@ -1,6 +1,6 @@
 node("ansible_docker"){
     stage("Git checkout"){
-        git credentialsId: 'github_creds', url: 'git@github.com:aragastmatb/example-playbook.git'
+        git credentialsId: 'adf8b006-11c5-415e-821c-5bc0d51c58bd', url: 'https://github.com/nicko203/freestylejob.git'
     }
     stage("Check ssh key"){
         secret_check=true
