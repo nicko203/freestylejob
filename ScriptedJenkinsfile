@@ -16,4 +16,3 @@ node("ansible_docker"){
         
     }
 }
-Footer
